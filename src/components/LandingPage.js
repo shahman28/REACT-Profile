@@ -1,24 +1,45 @@
 import React, { Component } from 'react';
 import './LandingPage.css'
-
+import Typical from 'react-typical';
+import picture from './Page One 2019_Color_-13(1).jpg'
 class LandingPage extends Component {
     render() {
         return (
             <div>
-                <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css' />
-                <div id='stars'></div>
-                <div id='stars2'></div>
-                <div id='stars3'></div>
-                <div id='title'>
-                    <span>
-                        PURE CSS
+                <div id="Image">
+                    <img src={picture} alt="picture" />
+                </div>    
+                    <div id='title'>
+                        <span>
+                            Hi, I'm Manav Shah
+                
                 </span>
-                    <br />
-                    <span>
-                        PARALLAX PIXEL STARS
-                </span>
+                        <br />
+                        <h3>
+                            I'm a
+                        <Typical
+                                loop={Infinity}
+                                wrapper='r'
+                                steps={[
+                                    ' Developer',
+                                    2000,
+                                    ' Hopeless Romantic',
+                                    2000,
+                                    'n Open Sourcer',
+                                    2000,
+                                    ' Story Teller',
+                                    2000,
+
+                                ]
+                                }
+                            ></Typical>
+                        </h3>
+                        <div class="box">
+
+
+                        </div>
+                    </div>
                 </div>
-            </div>
         )
     }
 }

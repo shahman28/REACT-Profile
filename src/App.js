@@ -1,25 +1,34 @@
 import React from 'react';
 import './App.css';
-import { Layout, Header, Navigation, Content } from 'react-mdl';
-import './components/Main.js'
-function App() {
-  return (
-    <div style={{ height: '300px', position: 'relative' }}>
-      <Layout fixedHeader>
-        <Header title={<span><span style={{ color: '#000000' }}></span><strong>My Personal Website</strong></span>}>
-          <Navigation>
-            <a href="/">Link</a>
-            <a href="/">Link</a>
-            <a href="/">Link</a>
-            <a href="/">Link</a>
-          </Navigation>
-        </Header>
-        <Content >
+import { BrowserRouter as Router } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import { Switch, Route } from 'react-router-dom';
+import LandingPage from './components/LandingPage';
+import huffman from './components/huffman'
 
-        </Content>
-      </Layout>
-    </div>
+
+
+function App() {
+
+  return (
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route path="/" exact component={LandingPage} />
+        <Route path="https://www.linkedin.com/in/manav-shah28/" >
+          <Route exact path="/huffman" component={huffman} />
+
+        </Route>
+      </Switch>
+    </Router>
+
   );
+
+}
+
+function toLinkedin() {
+  window.location.href = 'https://www.linkedin.com/in/manav-shah28/';
+  return null;
 }
 
 export default App;
