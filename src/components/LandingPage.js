@@ -35,7 +35,7 @@ class LandingPage extends Component {
                             ></Typical>
                         </h3>
                         <div class="box">
-
+                            
 
                         </div>
                     </div>
