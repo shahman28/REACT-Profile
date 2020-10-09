@@ -1,27 +1,20 @@
 import React from 'react';
 import './App.css';
-import { HashRouter as Router } from 'react-router-dom';
+//import { HashRouter as Router } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import { Switch, Route } from 'react-router-dom';
+//import { Switch, Route } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
-import huffman from './components/huffman'
+//import huffman from './components/huffman'
 
 
 
 function App() {
 
   return (
-    <Router>
+    <div>
       <Navbar />
-      <Switch>
-        <Route path="/" exact component={LandingPage} />
-        <Route path="https://www.linkedin.com/in/manav-shah28/" >
-          <Route exact path="/huffman" component={huffman} />
-
-        </Route>
-      </Switch>
-    </Router>
-
+      <LandingPage />
+    </div>
   );
 
 }
